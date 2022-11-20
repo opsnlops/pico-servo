@@ -19,7 +19,11 @@ add_executable(main
         )
 
 # pull in common dependencies
-target_link_libraries(main pico_stdlib)
+target_link_libraries(main
+        pico_stdlib
+        hardware_gpio
+        hardware_pwm
+        )
 
 # enable usb output, disable uart output
 pico_enable_stdio_usb(main 1)
